@@ -17,8 +17,8 @@ Pipfile.lock
 # Jupyter Notebook artifacts
 .ipynb_checkpoints/
 
-app/model/GoogleNews-vectors-negative300.bin.gz
-app/model/GoogleNews-vectors-negative300.bin
+model/GoogleNews-vectors-negative300.bin.gz
+model/GoogleNews-vectors-negative300.bin
 # Operating System artifacts
 app/.DS_Store 
 app/model/.DS_Store
