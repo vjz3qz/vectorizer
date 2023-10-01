@@ -21,7 +21,7 @@ Security:
 Should only accept inputs and interactions from authorized services or users.
 Should sanitize inputs to prevent injection attacks.
 
-Development Plan
+### Development Plan
 - [ ] Setup the project repository and development environment.
 - [ ] Develop the initial structure of the microservice, defining main components and interactions.
 - [ ] Implement the tokenization logic.
