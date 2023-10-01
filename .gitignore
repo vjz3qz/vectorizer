@@ -20,11 +20,11 @@ Pipfile.lock
 app/model/GoogleNews-vectors-negative300.bin.gz
 app/model/GoogleNews-vectors-negative300.bin
 # Operating System artifacts
-app/.DS_Store  # macOS
+app/.DS_Store 
 app/model/.DS_Store
-.DS_Store  # macOS
-Thumbs.db  # Windows
-desktop.ini  # Windows
+.DS_Store  
+Thumbs.db  
+desktop.ini  
 
 # IDEs/Editors artifacts
 .vscode/
