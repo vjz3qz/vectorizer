@@ -7,7 +7,7 @@ def setup_routes(app):
     def vectorize():
         try:
             # we get the text parameter from the request body
-            data = request.json 
+            data = request.get_json(force=True)
             text = data.get('text') 
 
             if not text:
@@ -18,7 +18,20 @@ def setup_routes(app):
             vectorizer = Vectorizer()
             vector = vectorizer.vectorize(tokens)
 
-            return jsonify({'vector': vector}), 200
+            # # URL of the Receiver microservice
+            # url = "http://receiver-service-url/receive-vector"
+            
+            # # Sending vector to the Receiver microservice
+            # response = requests.post(url, json={'vector': vector.tolist()}) # sends as a list
+
+            # # Check if the request was successful
+            # if response.status_code != 200:
+            #     app.logger.error(f"Failed to send vector to Receiver service. Response: {response.text}")
+            #     return jsonify({'error': 'Failed to send vector to Receiver service'}), 500
+            
+            return jsonify({'message': 'Vector sent successfully'}), 200
         
+        except ValueError as ve:
+            return jsonify({'error': 'Invalid input: ' + str(ve)}), 400     
         except Exception as e:
             return jsonify({'error': str(e)}), 500
