@@ -1,5 +1,6 @@
 from flask import request, jsonify
-from services import preprocessor, tokenizer, vectorizer
+from services import preprocessor, tokenizer
+from services.vectorizer import Vectorizer
 
 def setup_routes(app):
     @app.route('/vectorize', methods=['POST'])
@@ -14,8 +15,8 @@ def setup_routes(app):
             
             cleaned_text = preprocessor.clean(text)
             tokens = tokenizer.tokenize(cleaned_text)
-            google_vectorizer = vectorizer.Vectorizer()
-            vector = google_vectorizer.vectorize(tokens)
+            vectorizer = Vectorizer()
+            vector = vectorizer.vectorize(tokens)
 
             return jsonify({'vector': vector}), 200
         
