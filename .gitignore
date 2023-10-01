@@ -17,7 +17,11 @@ Pipfile.lock
 # Jupyter Notebook artifacts
 .ipynb_checkpoints/
 
+app/model/GoogleNews-vectors-negative300.bin.gz
+app/model/GoogleNews-vectors-negative300.bin
 # Operating System artifacts
+app/.DS_Store  # macOS
+app/model/.DS_Store
 .DS_Store  # macOS
 Thumbs.db  # Windows
 desktop.ini  # Windows
