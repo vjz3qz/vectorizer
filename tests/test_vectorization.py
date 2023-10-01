@@ -1,10 +1,15 @@
 import unittest
 import numpy as np
 from services.vectorizer import Vectorizer
+from unittest.mock import patch, MagicMock
+import gensim.models
 
 class TestVectorizer(unittest.TestCase):
     def setUp(self):
-        self.vectorizer = Vectorizer()
+        mock_model = MagicMock()
+        mock_model.__getitem__.return_value = np.array([1, 2, 3])
+        with patch.object(gensim.models.KeyedVectors, 'load_word2vec_format', return_value=mock_model):
+            self.vectorizer = Vectorizer()
 
     def test_vectorize(self):
         tokens = ['sample', 'text']

@@ -1,10 +1,14 @@
 import gensim.models # should use FastText instead
 # can also use Transformer models from HuggingFace
 import numpy as np
+import os
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
+model_path = os.path.join(dir_path, '../model/GoogleNews-vectors-negative300.bin')
 
 class Vectorizer:
-    def __init__(self, model_path = '../model/GoogleNews-vectors-negative300.bin'):
-        self.model = gensim.models.KeyedVectors.load_word2vec_format(model_path, binary=True)
+    def __init__(self, path = model_path):
+        self.model = gensim.models.KeyedVectors.load_word2vec_format(path, binary=True)
     
     def vectorize(self, tokens):
         """
@@ -12,6 +16,8 @@ class Vectorizer:
         :param tokens: List of word tokens.
         :return: A list of vectors representing the input tokens.
         """
+        if tokens is None:
+            raise ValueError("Input tokens should not be None")
         vectors = []
         for token in tokens:
             try:
