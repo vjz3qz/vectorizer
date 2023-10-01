@@ -14,7 +14,8 @@ def setup_routes(app):
             
             cleaned_text = preprocessor.clean(text)
             tokens = tokenizer.tokenize(cleaned_text)
-            vector = vectorizer.vectorize(tokens)
+            google_vectorizer = vectorizer.Vectorizer()
+            vector = google_vectorizer.vectorize(tokens)
 
             return jsonify({'vector': vector}), 200
         
