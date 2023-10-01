@@ -1,0 +1,36 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Virtual environments
+venv/
+*.venv
+.env
+
+# Pipenv artifacts
+Pipfile.lock
+
+# Jupyter Notebook artifacts
+.ipynb_checkpoints/
+
+# Operating System artifacts
+.DS_Store  # macOS
+Thumbs.db  # Windows
+desktop.ini  # Windows
+
+# IDEs/Editors artifacts
+.vscode/
+.idea/
+*.swp  # Vim
+*.swo  # Vim
+*.swn  # Vim
+*.bak  # Various editors
+*.code-workspace
+
+# Log and cache files
+*.log
+*.cache/
