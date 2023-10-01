@@ -22,18 +22,18 @@ Should only accept inputs and interactions from authorized services or users.
 Should sanitize inputs to prevent injection attacks.
 
 Development Plan
--[ ] Setup the project repository and development environment.
--[ ] Develop the initial structure of the microservice, defining main components and interactions.
--[ ] Implement the tokenization logic.
--[ ] Implement the vectorization logic using a suitable method (like TF-IDF, Word2Vec).
--[ ] Develop error handling and input sanitization logic.
--[ ] Unit test the tokenization and vectorization logic.
--[ ] Optimize the microservice for performance and throughput.
--[ ] Develop integration tests and perform extensive testing.
--[ ] Implement logging and monitoring features.
--[ ] Finalize the documentation and comments in the codebase.
--[ ] Deploy the microservice to a suitable environment.
--[ ] Perform sanity checks and final testing on the deployed instance.
+- [ ] Setup the project repository and development environment.
+- [ ] Develop the initial structure of the microservice, defining main components and interactions.
+- [ ] Implement the tokenization logic.
+- [ ] Implement the vectorization logic using a suitable method (like TF-IDF, Word2Vec).
+- [ ] Develop error handling and input sanitization logic.
+- [ ] Unit test the tokenization and vectorization logic.
+- [ ] Optimize the microservice for performance and throughput.
+- [ ] Develop integration tests and perform extensive testing.
+- [ ] Implement logging and monitoring features.
+- [ ] Finalize the documentation and comments in the codebase.
+- [ ] Deploy the microservice to a suitable environment.
+- [ ] Perform sanity checks and final testing on the deployed instance.
 
 
 
