@@ -17,13 +17,12 @@ class TestTokenizer(unittest.TestCase):
         self.assertEqual(tokens, ['this', 'is', 'a', 'test'])
     
     def test_empty_input(self):
-        text = ""
-        tokens = self.tokenizer.tokenize(text)
-        self.assertEqual(tokens, [])
+        with self.assertRaises(ValueError):
+            self.tokenizer.tokenize("")
     
     def test_none_input(self):
-        with self.assertRaises(TypeError):
-            tokens = self.tokenizer.tokenize(None)
+        with self.assertRaises(ValueError):
+            self.tokenizer.tokenize(None)
     
     def test_special_characters(self):
         text = "!@# $%^&* ():-;''"
