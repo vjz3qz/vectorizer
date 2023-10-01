@@ -1,6 +1,7 @@
 import unittest
 import numpy as np
 from services.vectorizer import Vectorizer
+
 class TestVectorizer(unittest.TestCase):
     def setUp(self):
         self.vectorizer = Vectorizer()
