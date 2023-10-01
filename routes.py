@@ -1,5 +1,5 @@
 from flask import request, jsonify
-from services import preprocessor, tokenizer
+from services.tokenizer import Tokenizer
 from services.vectorizer import Vectorizer
 
 def setup_routes(app):
@@ -13,8 +13,8 @@ def setup_routes(app):
             if not text:
                 return jsonify({'error': 'Missing text'}), 400
             
-            cleaned_text = preprocessor.clean(text)
-            tokens = tokenizer.tokenize(cleaned_text)
+            tokenizer = Tokenizer()
+            tokens = tokenizer.tokenize(text)
             vectorizer = Vectorizer()
             vector = vectorizer.vectorize(tokens)
 
