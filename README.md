@@ -27,7 +27,7 @@ Should sanitize inputs to prevent injection attacks.
 - [x] Implement the tokenization logic.
 - [x] Implement the vectorization logic using a suitable method (like TF-IDF, Word2Vec).
 - [ ] Develop error handling and input sanitization logic.
-- [ ] Unit test the tokenization and vectorization logic.
+- [x] Unit test the tokenization and vectorization logic.
 - [ ] Optimize the microservice for performance and throughput.
 - [ ] Develop integration tests and perform extensive testing.
 - [ ] Implement logging and monitoring features.
